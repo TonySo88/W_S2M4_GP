@@ -1,1 +1,88 @@
 /* styles here */
+body {
+    margin: 10px;
+    padding: 6px;
+    line-height: 1.3;
+    /* border: 3px dashed gray; */
+}
+/* targeting with an ID */
+#foo {
+
+}
+/* more specified selecting */
+.legal.smallish{
+
+}
+
+
+/* target anchor tags/any element with a specific href */
+[href="https://www.gutenberg.org"] {
+    color: darkcyan;
+}
+
+/* anchor tags nested anywhere inside navs */
+nav a {
+    color: orange;
+}
+
+nav {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 1.2rem;
+    text-align: center;
+}
+
+.smallish {
+    font-size: .8rem;
+}
+
+.legal {
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    margin: 2rem;
+    text-align: center;
+}
+/* psudo element */
+.separator::before,
+.separator::after {
+    content: ' *** ';
+}
+
+.chapter {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* paragraphs that are direct children of chapters */
+.chapter>p {
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+
+    /* top right bottom left */
+    margin: 1rem 0 1rem 0;
+    text-align: justify
+}
+
+/* psudo classes */
+/* 1st element, of type paragraph, within it's parent */
+p:nth-of-type(1) {
+    text-align:center;
+}
+
+p:nth-of-type(2) {
+    text-align:right;
+}
+
+/* 3rd element, of type paragraph, combined with psudo element first-line */
+p:nth-of-type(3)::first-line {
+    font-weight: bold
+}
+
+p:nth-of-type(3)::first-letter {
+    /* fontsize: double the set size */
+    font-size: 2em
+}
